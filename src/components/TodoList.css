@@ -1,0 +1,11 @@
+.TodoList {
+    display: flex;
+    flex-direction: column;
+}
+.SpanTodoList {
+    padding: 10px;
+    border: 2px solid red;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+}
