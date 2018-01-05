@@ -9,13 +9,14 @@ class TodoForm extends React.Component {
         }
     }
 
-    omChangeHandle(event) {
+    onChangeHandle(event) {
         this.setState({newItem: event.target.value});
     }
 
     onSubmit(event) {
         event.preventDefault();
         const {newItem} = this.state;
+        this.props.addItem(this.state.newItem);
     }
 
     render() {
@@ -25,15 +26,15 @@ class TodoForm extends React.Component {
                     <input 
                     type="text"
                     id="newItem"
-                    //placeholder="Add"
+                    placeholder="Add"
                     onChange={event => this.onChangeHandle(event)}
                     value={this.state.newItem}
                     />
-                    {/* <button>+</button> */}
+                    <button>+</button>
                 </form>
             </div>
         )
     }
 }
 
-export default TodoLForm;
+export default TodoForm;
