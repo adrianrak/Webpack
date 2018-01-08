@@ -11,19 +11,23 @@ class TodoForm extends React.Component {
 
     onChangeHandle(event) {
         this.setState({newItem: event.target.value});
+    
     }
 
     onSubmit(event) {
         event.preventDefault();
         const {newItem} = this.state;
-        this.props.addItem(this.state.newItem);
+        if (this.state.newItem.length !== 0) {
+            this.props.addItem(this.state.newItem);
+            this.setState({newItem: ''});
+        }
     }
 
     render() {
         return (
             <div className={style.TodoForm}>
                 <form className={style.form} onSubmit={event => this.onSubmit(event)}>
-                    <input 
+                    <input className={style.Input}
                     type="text"
                     id="newItem"
                     placeholder="Add"
