@@ -1,0 +1,9 @@
+.SpanTodo {
+    padding: 10px;
+    background-color: #F2E3A1;
+    border: 2px solid #660202;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
